@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        background-color: #ccc;
+      }
+      form {
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #aaa;
+      }
+      form h2 {
+        margin-bottom: 10px;
+      }
+      .form-field {
+        margin-bottom: 10px;
+      }
+      .form-field input,
+      #selectUF,
+      #message-field {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+        background-color: #bbb;
+      }
+      .form-field input:focus,
+      #selectUF:focus,
+      #message-field:focus {
+        background-color: #fff;
+        border: 1px solid;
+      }
+      #message-field{
+        resize: none;
+        overflow: hidden;
+        min-height: 100px;
+      }
+      #file-field{
+        background-color: #fff;
+        border: none;
+        padding: 0;
+      }
+      #button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+      }
+      #button-container button {
+        padding: 5px 20px;
+        background-color: #fff;
+        color: black;
+        border: 1px solid;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #button-container button:hover {
+        background-color: #4a57e3;  
+        color: white;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>Formulário de Contato</h2>
+
+      <div class="form-field">
+        <label><strong>Nome:</strong></label
+        ><br />
+        <input type="text" required/><br />
+      </div>
+
+      <div class="form-field">
+        <label><strong>E-mail:</strong></label
+        ><br />
+        <input type="email" required/><br />
+      </div>
+
+      <div class="form-field">
+        <label><strong>Telefone:</strong></label
+        ><br />
+        <input type="text" placeholder="(11) 91234-5678" id="telefone" required/><br />
+      </div>
+
+      <div class="form-field">
+        <label><strong>Estado:</strong></label
+        ><br />
+        <select name="UF" id="selectUF" required>
+          <option value="" disabled selected hidden>Selecione um estado</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label><strong>Cidade:</strong></label
+        ><br />
+        <input type="text" required/><br />
+      </div>
+
+      <div class="form-field">
+        <label><strong>CEP:</strong></label
+        ><br />
+        <input type="text" placeholder="12345-678" id="cep" required/><br />
+      </div>
+
+      <div class="form-field">
+        <label><strong>Mensagem:</strong></label
+        ><br />
+        <textarea name="message" id="message-field" required></textarea>
+      </div>
+
+      <div class="form-field">
+        <label><strong>Anexo (opcional):</strong></label
+        ><br />
+        <input type="file" name="file" id="file-field">
+      </div>
+
+      <div id="button-container">
+        <button>Enviar</button>
+      </div>
+    </form>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
